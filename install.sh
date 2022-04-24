@@ -5,7 +5,7 @@ cwd=`pwd`
 
 # clone some git repositories to $HOME
 cd $HOME
-git clone git@github.com:fox3000wang/oh-my-zsh.git .oh-my-zsh
+#git clone git@github.com:fox3000wang/oh-my-zsh.git .oh-my-zsh
 git clone git@github.com:fox3000wang/vimfiles.git .vim
 ln -sf $HOME/.vim/vimrc.improve $HOME/.vimrc
 
@@ -24,6 +24,8 @@ cp $cwd/tmux.config $HOME/.tmux.conf
 
 echo "cp $cwd/zshrc $HOME/.zshrc"
 cp $cwd/zshrc $HOME/.zshrc
+
+echo "cp -r $cwd/oh-my-zsh $HOME/.oh-my-zsh"
 
 # install personal scripts to $HOME/bin, which is added to $PATH
 mkdir -p $HOME/bin
