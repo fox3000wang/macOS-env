@@ -21,13 +21,14 @@ git clone git@github.com:fox3000wang/macOS-env.git
 ./install.sh
 ```
 
-### 同步以下配置文件
+### 同步以下配置文件 并自动切换源到国内
 
 - bashrc
 - profile
 - gitconfig
 - tmux.conf
 - zshrc
+- pip
 
 ### 自动集成
 

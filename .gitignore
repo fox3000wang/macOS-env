@@ -6,3 +6,4 @@
 /target*
 .DS_Store
 .settings/
+vim/undofiles/%Users%fox%.pip%pip.conf
