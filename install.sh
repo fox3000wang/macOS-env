@@ -1,35 +1,31 @@
-#!/bin/bash
+#!/bin/bash -v
 
 is_mac=`uname | grep Darwin`
 cwd=`pwd`
 
 # clone some git repositories to $HOME
 cd $HOME
-#git clone git@github.com:fox3000wang/oh-my-zsh.git .oh-my-zsh
+
 git clone git@github.com:fox3000wang/vimfiles.git .vim
 ln -sf $HOME/.vim/vimrc.improve $HOME/.vimrc
 
 cd $cwd
-echo "cp $cwd/bashrc $HOME/.bashrc"
 cp $cwd/bashrc $HOME/.bashrc
 
-echo "cp $cwd/profile $HOME/.profile"
 cp $cwd/profile $HOME/.profile
 
-echo "cp $cwd/gitconfig $HOME/.gitconfig"
 cp $cwd/gitconfig $HOME/.gitconfig
 
-echo "cp $cwd/tmux.config $HOME/.tmux.conf"
 cp $cwd/tmux.config $HOME/.tmux.conf
 
-echo "cp $cwd/zshrc $HOME/.zshrc"
 cp $cwd/zshrc $HOME/.zshrc
 
-echo "cp -r $cwd/oh-my-zsh $HOME/.oh-my-zsh"
+cp $cwd/condarc $HOME/.condarc
+
+cp -r $cwd/oh-my-zsh $HOME/.oh-my-zsh
 
 # install personal scripts to $HOME/bin, which is added to $PATH
 mkdir -p $HOME/bin
-cp $cwd/gfw $HOME/bin/
 [ -n $is_mac ] && cp $cwd/show-hide-files $HOME/bin/
 
 cd $HOME
