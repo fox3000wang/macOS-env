@@ -15,9 +15,9 @@ cp $cwd/tmux.config $HOME/.tmux.conf
 
 cp $cwd/condarc $HOME/.condarc
 
-cp $cwd/zshrc $HOME/.
-
 cp -r $cwd/pip $HOME/.pip
+
+cp $cwd/zshrc $HOME/.zshrc
 
 ln -s $cwd/oh-my-zsh $HOME/.oh-my-zsh
 
